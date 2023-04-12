@@ -55,8 +55,28 @@ export const Content = styled.div`
   > section{
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    justify-content: space-between;
     margin: 0;
+
+    div.content{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    > a{
+      z-index: 11;
+      text-decoration: none;
+      width: 24px;
+      height: 24px;
+
+      svg{
+        width: 100%;
+        height: 100%;
+        color: ${({ theme }) => theme.COLORS.GRAY_02};
+      }
+    }
 
     > div:first-child{
       display: none;

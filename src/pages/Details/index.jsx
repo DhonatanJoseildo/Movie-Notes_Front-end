@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
+import { FiEdit } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import { Container, Content, TopHeader, Author } from './styles';
 import { Header } from '../../components/Header';
 import { Section } from '../../components/Section';
@@ -73,14 +75,19 @@ export function Details() {
             {
               data.movie_tags &&
               <Section title="Marcadores">
-                {
-                  data.movie_tags.map(tag => (
-                    <Tag 
-                      key={String(tag.id)}
-                      title={tag.name}
-                    />
-                  ))
-                }
+                <div className="content">
+                  {
+                    data.movie_tags.map(tag => (
+                      <Tag 
+                        key={String(tag.id)}
+                        title={tag.name}
+                      />
+                    ))
+                  }
+                </div>
+                <Link>
+                  <FiEdit />
+                </Link>
               </Section>
             }
             <p>

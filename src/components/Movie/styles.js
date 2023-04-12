@@ -32,6 +32,7 @@ export const Container = styled.button`
   footer{
     width: 100%;
     display: flex;
+    align-items: center;
     margin-top: 24px;
   }
 `;
