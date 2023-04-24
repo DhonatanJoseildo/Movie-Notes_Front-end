@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
-import { FiEdit } from 'react-icons/fi';
+import { FiTrash2 } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { Container, Content, TopHeader, Author } from './styles';
 import { Header } from '../../components/Header';
@@ -23,6 +23,15 @@ export function Details() {
 
   function handleBack() {
     navigate(-1);
+  }
+
+  async function handleRemove() {
+    const confirm = window.confirm("Deseja realmente remover o filme");
+
+    if (confirm) {
+      await api.delete(`/notes/${params.id}`);
+      handleBack();
+    }
   }
 
   const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
@@ -85,8 +94,8 @@ export function Details() {
                     ))
                   }
                 </div>
-                <Link>
-                  <FiEdit />
+                <Link onClick={handleRemove}>
+                  <FiTrash2 />
                 </Link>
               </Section>
             }

@@ -5,6 +5,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   gap: 37px;
+  width: 1420px;
 `;
 
 export const Content = styled.div`

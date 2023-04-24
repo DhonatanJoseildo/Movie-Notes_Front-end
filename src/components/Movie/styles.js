@@ -19,9 +19,7 @@ export const Container = styled.button`
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
   
-  img{
-    margin: 8px 0 15px;
-  }
+  
 
   p{
     color: ${({ theme }) => theme.COLORS.GRAY_02};
@@ -34,5 +32,15 @@ export const Container = styled.button`
     display: flex;
     align-items: center;
     margin-top: 24px;
+  }
+`;
+
+export const Rating = styled.span`
+
+  margin: 8px 0 15px;
+  color: ${({ theme }) => theme.COLORS.PINK};
+
+  img {
+      margin-right: 8px;
   }
 `;

@@ -21,7 +21,7 @@ export const Search = styled.div`
 
 export const Content = styled.div`
   max-width: 1440px;
-  margin: auto;
+  margin: 0 auto;
 
   
 
@@ -68,6 +68,7 @@ export const Cards = styled.div`
   gap: 24px;
   max-height: 75vh;
   padding-right: 8px;
+  width: 100%;
 
   margin: auto;
   overflow-y: scroll;

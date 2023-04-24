@@ -15,6 +15,7 @@ export const Container = styled.div`
     overflow-y: auto;
 
     section{
+      max-width: 1420px;
       gap: 24px;
       margin: 40px 0;
 
