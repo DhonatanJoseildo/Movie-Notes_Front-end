@@ -5,7 +5,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   gap: 37px;
-  width: 1420px;
+  width: 100%;
 `;
 
 export const Content = styled.div`

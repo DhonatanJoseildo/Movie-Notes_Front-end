@@ -14,7 +14,7 @@ export const Container = styled.header`
 
 export const Content = styled.div`
   max-width: 1440px;
-  height: 116px;
+  min-height: 116px;
 
   margin: auto;
   
@@ -22,6 +22,12 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 64px;
+
+  @media (max-width: 748px){
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px auto;
+  }
 `;
 
 

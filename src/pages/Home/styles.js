@@ -1,13 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
+  max-width: 1440px;
+  width: 80vw;
   height: 100vh;
+
+  margin: auto;
   
   display: flex;
   flex-direction: column;
 
-  
+
 `;
 
 export const Search = styled.div`
@@ -21,6 +24,7 @@ export const Search = styled.div`
 
 export const Content = styled.div`
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
 
   
@@ -35,6 +39,18 @@ export const Content = styled.div`
     > div:first-child{
       grid-area: title;
       width: 100%;
+    }
+
+    @media (max-width: 748px){
+      grid-template-areas:
+      'title title'
+      'button button'
+      'card card';
+      justify-items: center;
+
+      div:first-child{
+        width: auto;
+      }
     }
 
   }
